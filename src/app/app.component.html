@@ -1,0 +1,37 @@
+<div class="tableContainer">
+
+  <div class="heading">
+  </div>
+  <div style="height: 10px;"></div>
+  <table class="vjTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Employee Name</th>
+        <th>Day 1</th>
+        <th>Day 2</th>
+        <th>Day 3</th>
+        <th>Day 4</th>
+        <th>Day 5</th>
+        <th>Day 6</th>
+        <th>Day 7</th>
+        <th>Day 8</th>
+      </tr>
+    </thead>
+    <tbody #tableContainer id="tbody">
+      <tr *ngFor="let i of EmployeeList">
+        <td>
+          <div class="">{{i.EmpId}}</div>
+        </td>
+        <td>
+          <div class="">{{i.Name}}</div>
+        </td>
+        <td *ngFor="let day of i.Days">
+          <div class="tableCell">
+            <div> {{day}}</div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
